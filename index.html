@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini CRM</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mini CRM</h1>
+        <p>Customer Relationship Management</p>
+    </header>
+
+    <main>
+        <!-- Dashboard -->
+<section class="dashboard">
+
+    <div class="stat-card">
+        <h3 id="totalCustomers">0</h3>
+        <p>Total Customers</p>
+    </div>
+
+    <div class="stat-card">
+        <h3 id="totalCompanies">0</h3>
+        <p>Total Companies</p>
+    </div>
+
+</section>
+
+        <!-- Add Customer Section -->
+        <section class="customer-form">
+            <h2>Add Customer</h2>
+
+            <form id="customerForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Customer Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Phone Number"
+                     maxlength="10"
+                     pattern="[0-9]{10}"
+                      required
+                >
+
+                <input
+                    type="text"
+                    id="company"
+                    placeholder="Company"
+                    required
+                >
+
+                <button type="submit">Add Customer</button>
+
+            </form>
+        </section>
+
+
+        <!-- Customer List Section -->
+        <section class="customer-list">
+
+            <h2>Customer List</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search customers..."
+            >
+
+            <div id="customerContainer"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
